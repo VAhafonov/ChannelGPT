@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+#postBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+#telegramIcon {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-image: url("/static/images/telegram.png");
+  background-position: center;
+  margin-bottom: 10px;
+}
+
+.smileButton {
+  margin-top: 10px;
+  width: 100px;
+}
+
+#yesButton {
+  background-color: #4caf50;
+  display: none;
+}
+
+#noButton {
+  background-color: #f44336;
+}
