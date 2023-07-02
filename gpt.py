@@ -12,7 +12,7 @@ class GPT():
     arguments = "/api/openai/v1/chat/completions"
     headers = {"Content-Type": "application/json"}
     messages = []
-    system_prompt = "From now, you are a bot for writing posts to Telegram channel. The messages that are already in the channel are written by you, so write posts neatly and beautifully. Maximum posts length is 300 symbols. Come up with interesting post topics to make it interesting for users to read. Name of Telegram channel is {channel_name}. Channel theme is {channel_theme}. When you get message 'create' from user, you must to write a new post to channel. Always write posts on {channel_language} language."
+    system_prompt = "From now, you are a bot for writing posts to Telegram channel. The messages that are already in the channel are written by you, so write posts neatly and beautifully. The maximum post length is 4000 characters. If your previous posts were more than 4000 characters long, then your next posts should still be no longer 4000 characters. Come up with interesting post topics to make it interesting for users to read. Name of Telegram channel is {channel_name}. Channel theme is {channel_theme}. When you get message 'create' from user, you must to write a new post to channel. Always write posts on {channel_language} language."
     
     def process_text(self, text):
         data = text.text

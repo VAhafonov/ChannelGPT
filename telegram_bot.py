@@ -18,6 +18,8 @@ class TelegramBot:
     def create_post(self):
         model = GPT(debug=self.debug, temperature=self.temperature, channel_name=self.channel_name, channel_theme=self.channel_theme, channel_language=self.channel_language)
         post = model.CreatePost()
+        if len(post)>4096:
+            post = post[:4096]
         return post
 
     def send_post(self, post):
@@ -33,11 +35,5 @@ class TelegramBot:
             else:
                 print("Failed to send post.")
         with open("messages.txt", "a") as file:
-            file.write(r+"\end_of_post")
+            file.write(post+"\end_of_post")
 
-
-if __name__ == "__main__":
-    bot = TelegramBot()
-    for _ in range(5):
-        post = bot.create_post()
-        bot.send_post(post)
