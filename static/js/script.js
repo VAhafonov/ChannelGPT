@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(response => {
         if (response.ok) {
           postText.textContent = "The post has been successfully sent to the channel."
+          yesButton.style.display = "none";
         } else {
           throw new Error('Request failed');
         }
@@ -25,12 +26,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
   noButton.addEventListener('click', function() {
     postText.textContent = "Post creating, please wait...";
+    yesButton.style.display = "none";
+    noButton.style.display = "none";
     fetch('/create')
       .then(response => response.json())
       .then(data => {
         postText.textContent = data.text;
         postText.style.whiteSpace = "pre-line";
         yesButton.style.display = "block";
+        noButton.style.display = "block";
       })
       .catch(error => console.error(error));
   });

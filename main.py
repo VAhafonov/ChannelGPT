@@ -1,9 +1,16 @@
 from flask import Flask, render_template, jsonify, request
-import json
+import json, os
 from telegram_bot import TelegramBot
 
 app = Flask(__name__)
 bot = TelegramBot()
+
+def detect_replit():
+    try:
+        owner = os.environ["REPL_OWNER"]
+        return True
+    except:
+        return False
 
 @app.route('/', methods=['GET'])
 def index():
@@ -29,4 +36,8 @@ def create():
     return jsonify(data)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+    if detect_replit():
+        print(f"Hello, {os.environ['REPL_OWNER']}! Your bot is running.")
+        app.run(host='0.0.0.0', port=8080, debug=False)
+    else:
+        app.run(port=8080, debug=False)
