@@ -28,12 +28,12 @@ class TelegramBot:
             print("\033[1;31mError. Invalid channel url.\033[0m")
             sys.exit()
 
-    def get_channel_messages(self, limit=20):
+    def get_channel_messages(self, limit=5):
         with open("messages.txt", "r") as file:
             text = file.read()
             text_list = text.split("\end_of_post")
             if len(text_list) > limit:
-                text_list = text_list[-20:]
+                text_list = text_list[(limit * -1):]
             return text_list
 
     def create_post(self):

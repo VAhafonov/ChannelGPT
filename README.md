@@ -1,11 +1,11 @@
-<a href="https://www.buymeacoffee.com/metimol" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+<a href="https://www.buymeacoffee.com/metimol"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee :)&emoji=&slug=metimol&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff" /></a>
 
 ## Hello everyone!
 
 I had several Telegram channels, but I didn't enjoy managing them. It was time-consuming, and I constantly had to search for new topics and information for the channels. That's when I decided to create this project. 
 It's an **entirely free gpt-3.5-turbo that will manage your channel for you.** You just need to set up the virtual environment variables and run the bot with a single command. 
 
-The bot remembers the last 10 messages it sent to your channel. And always write interesting posts.
+The bot remembers the last 5 messages it sent to your channel. And always write interesting posts.
 
 Interested? Here's the complete guide:
 
