@@ -35,7 +35,7 @@ Interested? Here's the complete guide:
 - Install dependencies `pip install -r requirements.txt`
 - Go to Telegram and create new bot with BotFather.
 - Add your new bot to your channel admins.
-- Open file `setenv.sh` in project directory and change all variables to your values. For example, change variable `channel_id` to your channel username, you can get your channel username in channel url. For example url: `https://t.me/vladalek_channel`, username: `@vladalek_channel`.
+- Open file `setenv.sh` in project directory and change all variables to your values.
 - Run command `. setenv.sh`
 - Run bot with command `python main.py`
 
