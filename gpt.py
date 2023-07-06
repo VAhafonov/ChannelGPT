@@ -7,7 +7,7 @@ class GPT():
         self.channel_theme = channel_theme
         self.debug = debug
     
-    url = "https://gpt4.gravityengine.cc"
+    url = "https://gpt4.xunika.uk"
     arguments = "/api/openai/v1/chat/completions"
     headers = {"Content-Type": "application/json"}
     messages = []
